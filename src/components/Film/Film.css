@@ -1,0 +1,23 @@
+.filmInfo_content {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    gap: 30px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.filmInfo_info span {
+    color: gray;
+}
+
+.filmInfo_info div {
+    padding: 10px 0;
+    box-sizing: border-box;
+    text-align: justify;
+}

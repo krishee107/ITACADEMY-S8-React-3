@@ -1,3 +1,9 @@
 .starships {
     color: white;
 }
+
+button {
+    padding: 30px;
+    margin: 0 auto;
+    display: block;
+}

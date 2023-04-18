@@ -1,21 +1,33 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import Starships from '../pages/Starships/Starships';
 import Ship from '../components/Ship/Ship';
-import Login from '../pages/Login/Login';
-import Register from '../pages/Register/Register';
+import { useState } from 'react';
 
-const Router = () => (
-    <BrowserRouter>
-        <Routes>
-            <Route index element={<Home />} />
-            <Route path="/starships/" element={<Starships />} />
-            <Route path="/starships/:id" element={<Ship />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/registro" element={<Register />} />
-            <Route path="*" element={<div>404</div>} />
-        </Routes>
-    </BrowserRouter>
-);
+const Router = () => {
+    const [isAuth, setisAuth] = useState(() => {
+        const storedAuth = localStorage.getItem("isAuth");
+        return storedAuth ? JSON.parse(storedAuth) : false;
+    });
+    return (
+
+        <BrowserRouter>
+            <Routes>
+                <Route index path="/" element={<Home />} />
+                <Route
+                    path="/starships"
+                    element={isAuth ? <Starships /> : <Navigate to="/" />}
+                />
+                <Route
+                    path="/starships/:id"
+                    element={isAuth ? <Ship /> : <Navigate to="/" />}
+                />
+                <Route path="*" element={<div>404</div>} />
+            </Routes>
+        </BrowserRouter>
+    );
+}
+
+
 
 export default Router;

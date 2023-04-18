@@ -57,7 +57,10 @@ const Ship = () => {
 
                   const url = f.split("/");
                   const film_id = url[url.length - 2]
-                  return <div className="pilotFilm" key={index}><img src={"https://starwars-visualguide.com/assets/img/films/" + film_id + ".jpg"} alt="" /></div>
+                  return (
+                    <Link key={index} to={"/film/" + film_id} className="pilotFilm">
+                      <img src={"https://starwars-visualguide.com/assets/img/films/" + film_id + ".jpg"} alt="" />
+                    </Link>)
                 })}
               </div>
             </div>
@@ -75,7 +78,7 @@ const Ship = () => {
         : (
           <p>Loading...</p>
         )}
-    </div>
+    </div >
   )
 }
 

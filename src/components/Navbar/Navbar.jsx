@@ -12,10 +12,12 @@ const Navbar = () => {
 
   const login = () => {
     setisAuth(true)
+    console.log("HAS HECHO LOGIN")
     window.location.reload();
   }
   const logout = () => {
     setisAuth(false)
+    console.log("HAS HECHO LOGOUT")
     window.location.reload();
   }
   useEffect(() => {

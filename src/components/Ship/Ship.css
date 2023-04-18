@@ -38,11 +38,13 @@
     gap: 10px;
 }
 
-.pilot {
+.pilot,
+.shipInfo_films .pilotFilm {
     max-width: 50px;
 }
 
-.pilot img {
+.pilot img,
+.pilotFilm img {
     width: 100%;
     cursor: pointer;
 }

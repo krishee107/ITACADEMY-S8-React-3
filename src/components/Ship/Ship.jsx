@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import './Ship.css'
+import Navbar from "../Navbar/Navbar";
 
 const Ship = () => {
   const { id } = useParams();
@@ -21,6 +22,7 @@ const Ship = () => {
 
   return (
     <div className="shipInfo">
+      <Navbar />
       {ship.length != 0 ?
         <div>
           <h1>{ship.name}</h1>

@@ -3,6 +3,7 @@ import Home from '../pages/Home/Home';
 import Starships from '../pages/Starships/Starships';
 import Ship from '../components/Ship/Ship';
 import { useState } from 'react';
+import Pilot from '../components/Pilot/Pilot';
 
 const Router = () => {
     const [isAuth, setisAuth] = useState(() => {
@@ -21,6 +22,10 @@ const Router = () => {
                 <Route
                     path="/starships/:id"
                     element={isAuth ? <Ship /> : <Navigate to="/" />}
+                />
+                <Route
+                    path="/pilot/:id"
+                    element={isAuth ? <Pilot /> : <Navigate to="/" />}
                 />
                 <Route path="*" element={<div>404</div>} />
             </Routes>

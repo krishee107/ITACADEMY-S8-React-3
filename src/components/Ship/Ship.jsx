@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import './Ship.css'
 import Navbar from "../Navbar/Navbar";
 
@@ -46,7 +46,9 @@ const Ship = () => {
                 const url = p.split("/");
                 const pilot_id = url[url.length - 2]
                 return (
-                  <div className="pilot" key={index}><img src={"https://starwars-visualguide.com/assets/img/characters/" + pilot_id + ".jpg"} alt={p} /></div>
+                  <Link key={index} className="pilot" to={"/pilot/" + pilot_id}>
+                    <img src={"https://starwars-visualguide.com/assets/img/characters/" + pilot_id + ".jpg"} alt={p} />
+                  </Link>
                 );
               })}</span></div>
             </div>

@@ -50,8 +50,19 @@ const Ship = () => {
                     <img src={"https://starwars-visualguide.com/assets/img/characters/" + pilot_id + ".jpg"} alt={p} />
                   </Link>
                 );
-              })}</span></div>
+              })}</span>
+              </div>
+              <div className="shipInfo_films">
+                FILMS: {ship.films.map((f, index) => {
+
+                  const url = f.split("/");
+                  const film_id = url[url.length - 2]
+                  return <div className="pilotFilm" key={index}><img src={"https://starwars-visualguide.com/assets/img/films/" + film_id + ".jpg"} alt="" /></div>
+                })}
+              </div>
             </div>
+
+
 
             <div className="shipInfo_ship">
               <div className="shipInfo_length">LENGTH: <span>{ship.length} METERS</span></div>

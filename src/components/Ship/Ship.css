@@ -31,7 +31,8 @@
 }
 
 .shipInfo_crew_pilots span,
-.shipInfo_crew_pilots {
+.shipInfo_crew_pilots,
+.shipInfo_films {
     display: flex;
     flex-direction: row;
     gap: 10px;

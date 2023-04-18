@@ -1,0 +1,31 @@
+.shipInfo {
+    color: white
+}
+
+.shipInfo h1 {
+    text-align: center;
+}
+
+.shipInfo_img {
+    margin: 0 auto;
+    width: fit-content;
+    padding: 20px 0;
+}
+
+.shipInfo_content {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.shipInfo_content span,
+.shipInfo_footer span {
+    color: gray;
+}
+
+.shipInfo_footer {
+    padding: 50px 10px;
+    display: flex;
+    justify-content: space-between;
+}

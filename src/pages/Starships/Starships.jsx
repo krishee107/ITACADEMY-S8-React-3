@@ -25,8 +25,8 @@ const Starships = () => {
         <ul>
           {starships.map((starship, index) => {
             return (
-              <Link to={"/starships/" + (index + 1)} >
-                <Starship key={index} id={index} ship={starship} />
+              <Link to={"/starships/" + (index + 2)} key={index} >
+                <Starship id={index} ship={starship} />
               </Link>
             )
           })}

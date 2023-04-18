@@ -5,6 +5,9 @@ nav ul {
     background-color: black;
     justify-content: center;
     font-size: 25px;
+    padding: 10px 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 
 nav ul a {

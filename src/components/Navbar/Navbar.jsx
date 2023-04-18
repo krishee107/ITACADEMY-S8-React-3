@@ -9,12 +9,14 @@ const Navbar = () => {
     const storedAuth = localStorage.getItem("isAuth");
     return storedAuth ? JSON.parse(storedAuth) : false;
   });
+
   const login = () => {
     setisAuth(true)
-    alert("LANZADO")
+    window.location.reload();
   }
   const logout = () => {
     setisAuth(false)
+    window.location.reload();
   }
   useEffect(() => {
     localStorage.setItem("isAuth", isAuth)

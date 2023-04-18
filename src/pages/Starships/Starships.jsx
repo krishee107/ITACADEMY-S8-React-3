@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Navbar from "../../components/Navbar/Navbar"
 import axios from "axios"
 import Starship from "./Starship/Starship";
+import { Link } from "react-router-dom";
 
 const Starships = () => {
   const [starships, setStarships] = useState([])
@@ -24,7 +25,9 @@ const Starships = () => {
         <ul>
           {starships.map((starship, index) => {
             return (
-              <Starship key={index} ship={starship} />
+              <Link to={"/starships/" + (index + 1)} >
+                <Starship key={index} id={index} ship={starship} />
+              </Link>
             )
           })}
         </ul>

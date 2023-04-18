@@ -1,5 +1,11 @@
 .ship {
     background-color: rgb(23, 23, 23);
-    padding: 10px;
+    padding: 20px;
+    box-sizing: border-box;
     margin: 25px 0px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
 }

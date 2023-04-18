@@ -42,6 +42,13 @@ const Ship = () => {
               <div className="shipInfo_crew_passengers">PASSENGERS CAPACITY: <span>{ship.passengers}</span></div>
               <div className="shipInfo_crew_cargo">CARGO CAPACITY: <span>{ship.cargo_capacity} TONS</span></div>
               <div className="shipInfo_crew_consumables">CONSUMABLES: <span>{ship.consumables}</span></div>
+              <div className="shipInfo_crew_pilots">PILOTS: <span>{ship.pilots.map((p, index) => {
+                const url = p.split("/");
+                const pilot_id = url[url.length - 2]
+                return (
+                  <div className="pilot" key={index}><img src={"https://starwars-visualguide.com/assets/img/characters/" + pilot_id + ".jpg"} alt={p} /></div>
+                );
+              })}</span></div>
             </div>
 
             <div className="shipInfo_ship">

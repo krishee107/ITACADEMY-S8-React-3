@@ -29,3 +29,19 @@
     display: flex;
     justify-content: space-between;
 }
+
+.shipInfo_crew_pilots span,
+.shipInfo_crew_pilots {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.pilot {
+    max-width: 50px;
+}
+
+.pilot img {
+    width: 100%;
+    cursor: pointer;
+}
